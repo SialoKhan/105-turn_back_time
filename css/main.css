@@ -1,195 +1,174 @@
-@font-face{
-	font-family: 'Wisdom Script';
-	src: url('../fonts/wisdom-script.otf') format('opentype');
-}
+/******** GLOBAL STYLES ********/
+
+html {
+	font-size:16px;
+  }
+  
 
 body {
 	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+	font-size:.9em;
+	color: #000000;
 }
 
-.container{
-	width: 1200px;
-	margin: 0 auto;
+/* The width property has been changed to max-width */
+.content-wrapper {
+  max-width: 1200px;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+	
 }
 
 h1,
 h2,
 h3,
 h4 {
-	color: rgb(8, 7, 7);
 	text-transform: uppercase;
 	font-weight: 700;
 }
+
 h1 {
-	font-size: 30px;
+	font-size: 1.87em;
+	
 }
+
 h2 {
-	font-size: 24px;
+	font-size: 1.50em;
 }
+
 h3 {
-	font-size: 18px;
+	font-size: 1.25em;
 }
+
 h4 {
-	font-size: 12px;
+	font-size: 0.75em;
 }
 
 p {
-	font-size: 14px;
-	line-height: 21px;
-    padding: 0 30px;
+	line-height: 36px;
 }
 
+/******** HEADER STYLES ********/
+/* The widths are in a percentage! */
 header {
-	height: 110px;
-	border-bottom: 3px solid #77a466;
-	margin: 0 auto;
+  display: flex;
+  justify-content: center;
+	
 }
 
 header h1 {
-	float: left;
-	margin: 0;
+	
+	width: 100%;
 	padding: 38px 0;
 }
+
 header h1 span {
-	color: #77a466;
+	color: #45610E;
 }
 
 header nav {
-	float: right;
+	
 	padding: 46px 0;
 }
+
 header nav ul {
-	margin: 0;
+	
 	padding: 0;
 }
+
 header nav ul li {
-	text-transform: uppercase;
+	
+	width: 100%;
+	font-size: 0.87em;
 	font-weight: 700;
-	font-size: 14px;
+	text-transform: uppercase;
 	padding: 0 10px;
-	display: inline;
 }
-header nav ul li a{
+
+header nav ul li a {
 	text-decoration: none;
-	color:#77a466;
+	color: #45610E;
 }
 
-.top-section,
-.bottom-section {
-	margin: 0 auto;
-	clear: both;
-}
-
-.main-image {
-	height: auto;
-	float: left;
-}
+/********  MAIN STYLES ********/
+/******** TOP SECTION ********/
+/* The widths are in a percentage! */
 .main-image img {
+	width: 100%;
+	border-top: 3px solid #77A466;
 	border-bottom: 3px solid #77a466;
 }
 
-.main-title {
-	height: auto;
-	float: left;
-}
-.main-title h3 {
-	text-align: left;
+
+.main-title h2 {
+	color: #45610E;
 	padding: 5px 0;
-	color: #77a466;
 }
-.main-title p {
-	padding: 0;
-	font-size: 16px;
-	line-height: 25px;
+
+/******** BOTTOM SECTION ********/
+.top-section,
+.bottom-section {
+
+  display: flex;
+  justify-content: center;
+
+}
+
+.bottom-section .content-wrapper {
+	border-top: 5px solid #EEE;
+	border-bottom: 5px solid #EEE;
 }
 
 .section-one,
 .section-two,
 .section-three {
-	width: 399px;
-	height: auto;
-	float: left;
-	border-top: 1px solid #eee;
+	box-sizing: border-box;
+	width: 100%;
+	
+	padding: 0 40px;
 }
 
-.section-one h4 {
-	padding: 10px 0;
+.section-one {
+	width: 29%;
 }
 
 .section-two {
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
+	width: 42%;
+	border-left: 5px solid #EEE;
+	border-right: 5px solid #EEE;
 }
 
-.section-two h4,
-.section-three h4 {
-	padding: 10px 30px;
+.section-three {
+	width: 29%;
 }
 
-.menu {
+.bottom-section h3 {
+	margin: 30px 0;
+}
+
+.menu-list {
+	padding-left: 0;
 	list-style: none;
-	padding: 0;
-}
-.menu li {
-	padding: 10px 0;
-	color:#77a466;
 }
 
-.reviews {
-	color: #333;
-	font-size: 16px;
-	line-height: 21px;
+.menu-list li {
+	color: #45610E;
+	font-size: 1em;
+	line-height: 36px;
 }
 
-.address {
-	font-size: 16px;
-	line-height: 24px;
-}
-
+/******** FOOTER STYLES ********/
+/* The widths are in a percentage! */
 footer {
-	border-top: 3px solid #eee;
-	margin: 0 auto;
-	clear: both;
 	text-align: center;
-	overflow: auto;
+	margin-top: 8px;
 }
+
 footer span {
-	font-family: 'Wisdom Script', cursive;
+	font-family: 'Galada', cursive;
 	text-transform: lowercase;
-	color: #77a466;
-	font-size: 14px;
-}
-
-footer .social {
-	padding-top: 5px;
-}
-
-footer .social ul {
-	list-style: none;
-	padding-left: 10px;
-}
-
-footer .social li{
-	display: inline-block;
-	padding: 0 10px;
-}
-
-footer .social a {
-	text-decoration: none;
-	color: #77a466;
-	transition: color 0.2s;
-}
-
-footer .social a:hover {
-	color: #47613d;
-}
-
-footer .fresh {
-	word-spacing: 1px;
-}
-
-footer .copyright {
-	color: #333;
-	font-variant: small-caps;
-	font-size: 12px;
+	color: #45610E;
+	font-size: 0.87em;
 }
